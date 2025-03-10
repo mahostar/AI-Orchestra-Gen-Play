@@ -1,5 +1,7 @@
 # NotaGen on Windows Subsystem for Linux (WSL)
 
+![NotaGen App - ABC to WAV/MIDI Converter](screenshot/1.png)
+
 This guide provides instructions for setting up and running the NotaGen music generation model on Windows using WSL to resolve compatibility issues.
 
 ## Quick Reference
