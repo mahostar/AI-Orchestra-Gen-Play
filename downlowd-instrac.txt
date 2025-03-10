@@ -1,0 +1,19 @@
+!git clone https://github.com/deeplearn-art/NotaGen
+%cd NotaGen
+!pip install -r requirements.txt
+!pip install torch==2.3.0 torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+!pip install accelerate
+!pip install optimum
+!pip install aria2
+
+url = 'https://huggingface.co/ElectricAlexis/NotaGen/resolve/main/weights_notagenx_p_size_16_p_length_1024_p_layers_20_h_size_1280.pth'
+filename = 'weights_notagenx_p_size_16_p_length_1024_p_layers_20_h_size_1280.pth'
+%cd gradio
+!aria2c --console-log-level=error -c -x 16 -s 16 -k 1M {url}  -o {filename}
+
+!python demo.py
+
+
+
+
+https://huggingface.co/ElectricAlexis/NotaGen/resolve/main/weights_notagen_pretrain_p_size_16_p_length_2048_p_layers_16_c_layers_3_h_size_1024_lr_0.0001_batch_4.pth
